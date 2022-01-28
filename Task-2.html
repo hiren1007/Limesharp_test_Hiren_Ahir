@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Test 2</h2>
+    
+
+<p>No vowels, Lowercase except the first letter</p>
+
+
+
+<script>
+    
+    
+function remVowel(str)
+      {
+	let al = [ 'a', 'e', 'i', 'o', 'u',
+			'A', 'E', 'I', 'O', 'U' ];
+	let result = "";
+	
+	for(let i = 0; i < str.length; i++)
+	{
+		
+		if (!al.includes(str[i]))
+		{
+			result += str[i];
+		}
+	}
+	return result;
+}
+    
+     function convert(str)
+    {
+      
+        let ch = str.split("");
+        for (let i = 0; i < str.length; i++) {
+  
+        
+            if (i == 0 && ch[i] != ' ' ||
+                ch[i] != ' ' && ch[i - 1] == ' ') {
+  
+               
+                if (ch[i] >= 'a' && ch[i] <= 'z') {
+  
+                  
+                    ch[i] = String.fromCharCode(ch[i].charCodeAt(0) - 'a'.charCodeAt(0) + 'A'.charCodeAt(0));
+                }
+            }
+  
+            
+            else if (ch[i] >= 'A' && ch[i] <= 'Z')
+  
+               
+                ch[i] = String.fromCharCode(ch[i].charCodeAt(0) + 'a'.charCodeAt(0) - 'A'.charCodeAt(0));          
+        }
+  
+        
+        let st = (ch).join("");
+        return st;
+           
+    }
+    
+    
+</script>
+
+
+</body>
+</html>
