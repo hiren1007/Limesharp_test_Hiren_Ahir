@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Test 1</h2>
+    
+<p>Repeat array 3 times</p>
+
+
+<script>
+    
+  var arrayA = [1,2,3];
+var repeats = 3;
+var repeat = Array.apply(null, {length: repeats * arrayA.length})
+        .map(function(e,i){return arrayA[i % arrayA.length]});
+</script>
+
+</body>
+</html>
